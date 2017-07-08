@@ -8,7 +8,17 @@ options {
  Parser rules
  */
 
-//
+expression
+    : primaryExpr
+    ;
+
+primaryExpr
+    : '(' primaryExpression ')'
+    | ID
+    | STRING
+    | LONG
+    | INT
+    ;
 
 /*
  Lexer rules
