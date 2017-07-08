@@ -8,8 +8,17 @@ options {
  Parser rules
  */
 
+statements
+    : statement*
+    ;
+
 statement
-    : expression
+    : whileStmt
+    | expression ';'
+    ;
+
+whileStmt
+    : 'while' '(' expression ')' '{' statements '}'
     ;
 
 expression // assignment expression, right-associative
