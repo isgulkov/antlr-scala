@@ -10,8 +10,7 @@ object Main
 		x = 2500;
 
 		print("x got reassigned to ");
-		println();
-
+		println(x);
 
 		for(p <- 1 to 1) {
             var y = 1500;
@@ -24,6 +23,6 @@ object Main
 		z = 2000;
 
 		print("z assigned after declaration equals ");
-		println();
+		println(z);
 	}
 }
