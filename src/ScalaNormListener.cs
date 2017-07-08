@@ -40,12 +40,13 @@ namespace ScalaTranslator
 		{
             OutLine("using System;");
 			OutLine("using System.Linq;");
+            OutLine("using System.Collections.Generic;");
 			OutLine("");
 			OutLine("class Program {");
-            OutLine("static IEnumerable<int> Range(long start, long end)");
+            OutLine("static IEnumerable<int> Range(int start, int end)");
 			OutLine("{");
 			OutLine("return Enumerable.Range(start, end - start + 1);");
-			OutLine(")");
+			OutLine("}");
 			OutLine("");
             OutLine("public static void Main() {");
 		}
