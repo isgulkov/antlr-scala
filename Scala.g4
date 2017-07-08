@@ -14,11 +14,16 @@ statements
 
 statement
     : whileStmt
+    | forStmt
     | expression ';'
     ;
 
 whileStmt
     : 'while' '(' expression ')' '{' statements '}'
+    ;
+
+forStmt
+    : 'for' '(' ID '<-' expression 'to' expression ')' '{' statements '}'
     ;
 
 expression // assignment expression, right-associative
