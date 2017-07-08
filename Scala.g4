@@ -9,7 +9,14 @@ options {
  */
 
 file
-    : statements EOF
+    :
+    'object' ID
+    '{'
+        'def' 'main' '(' 'args' ':' 'Array' '[' 'String' ']' ')'
+        '{'
+            statements
+        '}'
+    '}' EOF
     ;
 
 statements
