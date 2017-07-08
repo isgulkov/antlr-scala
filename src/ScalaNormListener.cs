@@ -60,10 +60,10 @@ namespace ScalaTranslator
 		public override void EnterDeclarationStmt(ScalaParser.DeclarationStmtContext context)
 		{
 			if(context.expression() == null) {
-				OutLine($"object {context.ID().GetText()};");
+				OutLine($"dynamic {context.ID().GetText()};");
 			}
 			else {
-				OutLine($"var {context.ID().GetText()} = {context.expression().GetText()};");
+				OutLine($"dynamic {context.ID().GetText()} = {context.expression().GetText()};");
 			}
 		}
 
