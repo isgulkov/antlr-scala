@@ -19,6 +19,9 @@ statements
 statement
     : whileStmt
     | forStmt
+    | declarationStmt ';'
+    | printStmt ';'
+    | printlnStmt ';'
     | expression ';'
     ;
 
@@ -28,6 +31,18 @@ whileStmt
 
 forStmt
     : 'for' '(' ID '<-' expression 'to' expression ')' '{' statements '}'
+    ;
+
+declarationStmt
+    : 'var' ID ('=' expression)?
+    ;
+
+printStmt
+    : 'print' '(' expression ')'
+    ;
+
+printlnStmt
+    : 'println' '(' expression ')'
     ;
 
 expression // assignment expression, right-associative
