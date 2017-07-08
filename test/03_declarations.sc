@@ -13,7 +13,7 @@ object Main
 		println();
 
 
-		for(x <- 1 to 1) {
+		for(p <- 1 to 1) {
             var y = 1500;
             
             print("y declared in a block equals ");
