@@ -5,7 +5,8 @@ object Main
 	    var x = "priv";
 	    
 	    while(x == "priv") {
-            print("priv ");	    
+            print("priv ");
+            x = "ne priv";
 	    }
 	    
 	    var y = 100L;
@@ -24,7 +25,7 @@ object Main
 	    
 	    var w = 10000;
 	    
-	    while(z == 1000 * 1000 / 10 / 10) {
+	    while(w == 1000 * 1000 / 10 / 10) {
 	        print("priv ");
 	        w = 1337;
 	    }
