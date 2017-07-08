@@ -9,11 +9,17 @@ options {
  */
 
 expression
+    : bitshiftExpr
+    ;
+
+bitshiftExpr
     : primaryExpr
+    | bitshiftExpr '<<' primaryExpr
+    | bitshiftExpr '>>' primaryExpr
     ;
 
 primaryExpr
-    : '(' primaryExpression ')'
+    : '(' expression ')'
     | ID
     | STRING
     | LONG
