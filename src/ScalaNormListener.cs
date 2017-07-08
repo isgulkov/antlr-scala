@@ -107,5 +107,12 @@ namespace ScalaTranslator
                 OutLine("Console.WriteLine();");
 			}
 		}
+
+		public override void EnterStatement(ScalaParser.StatementContext context)
+		{
+			if(context.expression() != null) {
+				OutLine($"{context.expression().GetText()};");
+			}
+		}
 	}
 }
