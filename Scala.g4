@@ -92,9 +92,9 @@ ID : [a-zA-Z][a-zA-Z0-9]* ;
 
 STRING : '"' ( ~('\r' | '\n' | '"') | '\\"' )* '"' ;
 
-LONG : DIGIT+ ('L' | 'l') ;
+LONG : '-'? DIGIT+ ('L' | 'l') ;
 
-INT : DIGIT+ ;
+INT : '-'? DIGIT+ ;
 
 DIGIT : [0-9] ;
 
