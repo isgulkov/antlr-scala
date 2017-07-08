@@ -8,8 +8,9 @@ options {
  Parser rules
  */
 
-expression
+expression // assignment expression, right-associative
     : comparativeExpr
+    | comparativeExpr '=' expression
     ;
 
 comparativeExpr
