@@ -9,7 +9,14 @@ options {
  */
 
 expression
+    : comparativeExpr
+    ;
+
+comparativeExpr
     : multiplicativeExpr
+    | comparativeExpr '<' multiplicativeExpr
+    | comparativeExpr '>' multiplicativeExpr
+    | comparativeExpr '==' multiplicativeExpr
     ;
 
 multiplicativeExpr
