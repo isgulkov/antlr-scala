@@ -14,6 +14,8 @@ options {
  Lexer rules
  */
 
+ID : [a-zA-Z][a-zA-Z0-9]* ;
+
 STRING : '"' ( ~('\r' | '\n' | '"') | '\\"' )* '"' ;
 
 LONG : DIGIT+ 'L' ;
