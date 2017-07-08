@@ -81,7 +81,7 @@ namespace ScalaTranslator
 		{
 			Out($"foreach(var {context.ID().GetText()} in ");
 
-			Out($"Enumerable.Range({context.expression()[0]}, {context.expression()[0]})");
+			Out($"Range({context.expression()[0].GetText()}, {context.expression()[1].GetText()})");
 
 			OutLine(") {");
 		}
