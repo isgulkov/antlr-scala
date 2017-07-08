@@ -45,11 +45,11 @@ declarationStmt
     ;
 
 printStmt
-    : 'print' '(' expression ')'
+    : 'print' '(' expression? ')'
     ;
 
 printlnStmt
-    : 'println' '(' expression ')'
+    : 'println' '(' expression? ')'
     ;
 
 expression // assignment expression, right-associative
