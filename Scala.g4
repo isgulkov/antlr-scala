@@ -9,7 +9,13 @@ options {
  */
 
 expression
+    : multiplicativeExpr
+    ;
+
+multiplicativeExpr
     : bitshiftExpr
+    | multiplicativeExpr '*' bitshiftExpr
+    | multiplicativeExpr '/' bitshiftExpr
     ;
 
 bitshiftExpr
